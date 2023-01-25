@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', api);
+// app.use('/api', api);
 
 app.use(express.static('public'));
 
@@ -31,7 +31,7 @@ app.get('/*', (req, res) =>
 
 
 
-// app.listen(3000)
+
 app.listen(PORT, () => {
 console.log(`im here`)
 }
