@@ -46,11 +46,11 @@ app.use(router);
 app.use(express.static('public'));
 
 
-//get request for notes page
-// app.get('/mood', (req, res) => {
-//     res.render('login');
-// }
-// );
+// get request for notes page
+app.get('/', (req, res) => {
+    res.render('welcome');
+}
+);
 // //get request for homepage
 // app.get('/*', (req, res) => {
 //     res.render('example');
