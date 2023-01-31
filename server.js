@@ -7,9 +7,9 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sequelize = require('./config/connection');
 
-const helpers = require('./utils/helpers');
+const helpers = require('./utils/auth');
 
-const router = require('./controllers/api');
+const router = require('./controllers');
 //sets port for localhost
 const PORT = process.env.PORT || 3003;
 
@@ -47,13 +47,15 @@ app.use(express.static('public'));
 
 
 //get request for notes page
-app.get('/mood', (req, res) => 
-    res.sendFile(path.join(__dirname, './public/mood.html'))
-);
-//get request for homepage
-app.get('/*', (req, res) => 
-    res.sendFile(path.join(__dirname, './views/login.handlebars'))
-);
+// app.get('/mood', (req, res) => {
+//     res.render('login');
+// }
+// );
+// //get request for homepage
+// app.get('/*', (req, res) => {
+//     res.render('example');
+// }
+// );
 
 
 
