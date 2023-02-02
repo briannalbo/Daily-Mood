@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 * {
-    background-color: lightcyan;
+    background-color: rgb(193, 239, 232);
+}
+
+header {
+    font-family: 'Aclonica', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+
+header h1 {
+    font-size: 70px;
+}
+
+.login-page {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.login {
+    padding-top: 80px;
+}
+
+.signup {
+    padding-top: 60px;
 }
