@@ -5,14 +5,14 @@
     background-color: rgb(193, 239, 232);
 }
 
-header {
+#login-header {
     font-family: 'Aclonica', sans-serif;
     display: flex;
     justify-content: center;
     padding:20px;
 }
 
-header h1 {
+#login-header h1 {
     font-size: 70px;
 }
 
@@ -21,9 +21,83 @@ header h1 {
 }
 
 .login {
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .signup {
     padding-top: 60px;
+}
+
+.form-group {
+    padding: 5px;
+}
+
+.nav {
+   display: flex;
+   justify-content: end;
+}
+
+.nav-item {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+}
+
+.quote-box {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    padding-top: 20px;
+    margin: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.flex-title {
+    display: flex;
+    font-family: 'Aclonica', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.flex-title-child {
+    flex: 1;
+}
+.flex-title-child:first-child {
+    margin-right: 20px;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    border: solid;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 3%;
+}
+
+.question-form {
+    margin: 10px;
+}
+
+.previous-mood {
+    border: solid;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 3%;
+}
+
+#prev-mood {
+    padding-top: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
