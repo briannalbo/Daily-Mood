@@ -12,6 +12,11 @@
     padding:20px;
 }
 
+#logo {
+    width: 120px;
+    height: 120px;
+}
+
 #login-header h1 {
     font-size: 70px;
 }
