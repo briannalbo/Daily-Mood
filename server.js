@@ -47,10 +47,10 @@ app.use(express.static('public'));
 
 
 // get request for notes page
-app.get('/', (req, res) => {
-    res.render('welcome');
-}
-);
+// app.get('/', (req, res) => {
+//     res.render('welcome');
+// }
+// );
 // //get request for homepage
 // app.get('/*', (req, res) => {
 //     res.render('example');
@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () =>
       console.log(
-        `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
+        `\nServer running on port ${PORT}. listeninnnng`
       )
     );
   });
