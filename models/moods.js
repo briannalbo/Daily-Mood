@@ -1,3 +1,5 @@
+//establishes model for user mood entries
+//this defines the format that the entries will use when added to db
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -31,13 +33,7 @@ Mood.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // mood_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'user',
-    //     key: 'id',
-    //   },
-    // },
+    
   },
   {
     sequelize,

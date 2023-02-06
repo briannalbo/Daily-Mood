@@ -1,3 +1,4 @@
+//function to handle existing user securely logging into dailymood profile
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -22,6 +23,9 @@ const loginFormHandler = async (event) => {
   }
 };
 
+//function to handle a new user signing up for a daily mood profile
+//uses post method to push user criteria to database for future login
+//after sign-up, seemlessly transitions to users new profile
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -43,7 +47,7 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
+//eventlisteners to trigger functions above
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);

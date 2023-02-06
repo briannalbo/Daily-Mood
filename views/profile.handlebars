@@ -1,3 +1,4 @@
+{{!-- page for user profile --}}
 <header class="flex-title">
     <img src="./assets/img/moonjar.png" id="logo"/>
   <h1 class="flex-title-child"> DAILY MOOD</h1>
@@ -19,6 +20,15 @@
 <div class="flex-container">
   <container class="flex-child previous-mood">
     <h4 id="prev-mood">Previous Moods</h4>
+<p id="moodymod"></p>
+
+    {{#each moods as |mood|}}
+
+    <p>
+      {{mood.id}}
+      {{mood.hows_today}}
+    </p>
+    {{/each}}
   </container>
 
   <container class="question-container flex-child">

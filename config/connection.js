@@ -1,3 +1,5 @@
+//imports sequelize package
+//uses dotenv package to protect db login criteria
 const Sequelize = require('sequelize');
 require('dotenv').config();
 

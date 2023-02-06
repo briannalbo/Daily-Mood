@@ -1,11 +1,8 @@
+//imports express router, user model, and authorization helper
 const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/', (res) => {
-//   res.render('welcome');
-
-// });
 
 // Prevent non logged in users from viewing the homepage
 router.get('/profile', withAuth, async (req, res) => {
@@ -15,11 +12,10 @@ router.get('/profile', withAuth, async (req, res) => {
       order: [['name', 'ASC']],
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((user) => user.get({ plain: true }));
 
     res.render('profile', {
       users,
-      // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -27,15 +23,15 @@ router.get('/profile', withAuth, async (req, res) => {
     console.log('not logged in');
   }
 });
-
+//if a session already exists, redirects user to their profile
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('profile');
     return;
   }
 
   res.render('login');
 });
-
+//exports router
 module.exports = router;
