@@ -13,12 +13,19 @@
 }
 
 #logo {
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 70px;
+    padding-bottom: 15px;
+}
+
+#login-logo {
+    width: 52px;
+    height: 75px;
 }
 
 #login-header h1 {
     font-size: 70px;
+    
 }
 
 .login-page {
@@ -77,6 +84,7 @@
 
 .flex-title-child {
     flex: 1;
+    padding-top: 10px;
 }
 .flex-title-child:first-child {
     margin-right: 20px;

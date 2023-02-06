@@ -19,7 +19,6 @@ const app = express();
 const sess = {
     secret: 'security',
     cookie: {
-      // Stored in milliseconds
       maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
     },
     resave: false,
@@ -46,33 +45,11 @@ app.use(router);
 app.use(express.static('public'));
 
 
-// get request for notes page
-app.get('/', (req, res) => {
-    res.render('welcome');
-}
-);
-// //get request for homepage
-// app.get('/*', (req, res) => {
-//     res.render('example');
-// }
-// );
-
-
-
-
-
-
-
-// app.listen(3000)
-// app.listen(PORT, () => {
-// console.log(`im here`)
-// }
-// );
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () =>
       console.log(
-        `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
+        `\nServer running on port ${PORT}. listeninnnng`
       )
     );
   });
