@@ -38,7 +38,7 @@ const logout = async () => {
       });
     
   };
-  getMoods();
+  // getMoods();
 
 
 //DOM variables needed to display randomly generated motivational quote
