@@ -33,20 +33,19 @@ router.post('/profile', withAuth, async (req, res) => {
 
 
   //attempting to display previous user moods to page
-  router.get('/:id', withAuth, async (req, res) => {
+  router.get('/:id', async (req, res) => {
     try {
-      const moodData = await Mood.findAll(req.params.id, {
-        include: hows_today,
-      });
-      const mood = moodData.get({ plain: true });
+      const moodData = await Mood.findAll();
+      // const mood = moodData.get({ plain: true });
 
-      console.log(mood);
+      // console.log(mood);
       if (!moodData) {
         res.status(400).json({ message: "Not Found" });
         return;
       }
-      res.status(200).json({ fluff });
+      res.status(200).json({ moodData });
     } catch (err) {
+      // console.error(err)
       res.status(500).json(err);
     }
     return;

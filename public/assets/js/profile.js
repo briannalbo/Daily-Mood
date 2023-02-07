@@ -29,8 +29,9 @@ const logout = async () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
-        tester.textContent = data;
-        
+        // tester.textContent = data.moodData;
+        data.moodData.map(({ hows_today, improve_day }) => { return { hows_today, improve_day} })
+        // tester.textContent = data.moodData[2].hows_today;
       
       })
       .catch((err) => {
@@ -38,7 +39,7 @@ const logout = async () => {
       });
     
   };
-  // getMoods();
+  getMoods();
 
 
 //DOM variables needed to display randomly generated motivational quote
