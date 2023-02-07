@@ -35,11 +35,11 @@ The Daily Mood is designed for users to reflect on themselves every day while al
 * Component that involves meditation
 
 # Links
-Deployed URL -
+Deployed URL -https://daily-mood.herokuapp.com/
 
 GitHub Repo - https://github.com/briannalbo/Daily-Mood
 
-Link to Presentation - 
+Link to Presentation - https://docs.google.com/presentation/d/1X9hIyWXIDtl6nZOR-_y-EYPSqP-o3JLE4c1tu57UTUE/edit?usp=sharing
 
 # Credits
 Jar Moon Logo by Abby Wig.
